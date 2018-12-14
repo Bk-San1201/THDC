@@ -10,7 +10,7 @@ int main()
     printf("Nhap x : ");
     scanf("%lf", &x);
     double luythua, giaithua;
-    int sign = 1, i;
+    double sign = 1, i;
     luythua = 1;
     giaithua = 1;
     double s1 = 1, s2 = 1, s3 = 1;

@@ -3,6 +3,13 @@
 
 int ucln(int a, int b)
 {
+    
+}
+int main()
+{
+    int a, b;
+    printf("Nhap vao a,b\n");
+    scanf("%d%d", &a, &b); int n=a*b;
     if (a < b)
     {
         int temp = a;
@@ -15,15 +22,9 @@ int ucln(int a, int b)
         a = b;
         b = r;
     }
-    return a;
-}
-int main()
-{
-    int a, b;
-    printf("Nhap vao a,b\n");
-    scanf("%d%d", &a, &b);
-    printf("UCLN %d", ucln(a, b));
-    printf("\nBCNN %d", a * b / ucln(a, b));
+    // return a;
+    printf("UCLN %d", a);
+    printf("\nBCNN %d", n / a);
     printf("\nDang Lam San 20170111");
     return 0;
 }
