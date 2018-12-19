@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
+#include <String.h>
 
 struct infoStudent
 {
@@ -56,10 +57,38 @@ void getInfo()
 	}
 }
 
-void sort()
+int check(struct infoStudent a , struct infoStudent b)
 {
+	if (strcmp(a.firstName , b.firstName) ==1 ) return 0 ;
 
+	else if (strcmp(a.firstName , b.firstName) == -1 ) return 1 ;
+
+	else {
+		if (strcmp(a.lastName , b.lastName) >= 0) return 0;
+
+		else return 1 ;
+	}
 }
+
+void Sort()
+{
+	int i,j ;
+	for(i=0; i<n-1; i++)
+	{
+		int Imin = i;
+		for(j=i+1; j<n; j++)
+		{
+			if(check(data[j] , data[Imin]) )
+			{
+				Imin = j;
+			}
+		}
+		struct infoStudent temp = data[Imin];
+		data[Imin] = data[i];
+		data[i] = temp;
+	}
+}
+
 int main()
 {
 	char s = '1';
@@ -76,7 +105,7 @@ int main()
 			setInfo();
 			break;
 		case '2':
-			sort();
+			Sort();
 			break;
 		case '3':
 			getInfo();
