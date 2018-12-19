@@ -10,7 +10,7 @@ struct infoStudent
 	long long int id;
 	int birthDay;
 	int birthMonth;
-	int birthYear;
+	int birthYear;int Sexual;
 	float midMarks, finalMarks;
 };
 
@@ -26,8 +26,8 @@ void setInfo()
 	gets(data[n].firstName);
 	printf("Nhap Lop ");
 	gets(data[n].Class);
-	printf("Nhap MSSV & Ngay Sinh & Thang Sinh & Nam Sinh\n");
-	scanf("%ld%d%d%d", &data[n].id, &data[n].birthDay, &data[n].birthMonth, &data[n].birthYear);
+	printf("Nhap MSSV & Ngay Sinh & Thang Sinh & Nam Sinh & Gioi tinh\n");
+	scanf("%ld%d%d%d%d", &data[n].id, &data[n].birthDay, &data[n].birthMonth, &data[n].birthYear, &data[n].Sexual);
 	printf("\nNhap diem giua ky va cuoi ky\n");
 	scanf("%f%f", &data[n].midMarks, &data[n].finalMarks);
 	n++;
@@ -51,9 +51,11 @@ void getInfo()
 		printf("%ld\n", data[i].id);
 		printf("Ngay thang nam sinh: ");
 		printf("%d %d %d\n", data[i].birthDay, data[i].birthMonth, data[i].birthYear);
+		printf("Gioi tinh: ");
+		printf("%d\n", data[i].Sexual);
 		printf("Diem thi giua ky va cuoi ky: ");
 		printf("%f %f\n", data[i].midMarks, data[i].finalMarks);
-		printf("---------------------------------");
+		printf("---------------------------------\n");
 	}
 }
 
