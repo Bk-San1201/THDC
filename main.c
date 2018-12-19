@@ -37,7 +37,7 @@ void getInfo()
 {
 	if (n == 0)
 	{
-		printf("No Data Found");
+		printf("No Data Found\n");
 		return;
 	}
 	for (int i = 0; i < n; i++)
@@ -58,7 +58,7 @@ void getInfo()
 
 void sort()
 {
-	
+
 }
 int main()
 {
@@ -87,6 +87,7 @@ int main()
 		printf("Ban muon lam gi ?\n");
 		printf("1. Them sinh vien\n2. Sap xep\n3. In sinh vien\n");
 		printf("Nhan 1 2 3 de chon. Nhan # de thoat!\n");
+		fflush(stdin);
 		scanf("%c", &s);
 	}
 	return 0;
